@@ -1,0 +1,14 @@
+rawdata/
+01-fastqc/*_fastqc
+01-fastqc/multiqc_controls/
+01-fastqc/multiqc_conditions/
+01-fastqc/multiqc_all/multiqc_all_data/
+01-fastqc/multiqc_all/multiqc_all_plots/
+02-trimmed/*.fastq.gz
+02-trimmed/fastp-reports/*_fastp.json
+03-fastqc/*_fastqc
+03-fastqc/multiqc_controls/
+03-fastqc/multiqc_conditions/
+03-fastqc/multiqc_all/multiqc_all_data/
+03-fastqc/multiqc_all/multiqc_all_plots/
+
