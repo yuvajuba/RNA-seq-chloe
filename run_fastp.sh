@@ -1,17 +1,14 @@
-# !/bin/bash
-
-cd /mnt/ssd/projects/RNAseq-chloe/
+#!/bin/bash
+cd/mnt/ssd/projects/RNAseq-chloe/
 
 raw_dir="rawdata"
 trim_dir="02-trimmed"
 fastp_report_dir="02-trimmed/fastp-reports"
 
 mkdir -p "$fastp_report_dir"
-
-## =============================
-## Step 02 : Trimming 
-## =============================
-
+##==========
+##step2: trimming
+##==========
 for r1 in "$raw_dir"/*_R1_*.fastq.gz; do
     base=$(basename "$r1" _R1_001.fastq.gz)
     r2="$raw_dir/${base}_R2_001.fastq.gz"
@@ -22,7 +19,7 @@ for r1 in "$raw_dir"/*_R1_*.fastq.gz; do
     html="$fastp_report_dir/${base}_fastp.html"
     json="$fastp_report_dir/${base}_fastp.json"
 
-    fastp \
+    ./fastp \
       -i "$r1" \
       -I "$r2" \
       -o "$out_r1" \
@@ -30,10 +27,12 @@ for r1 in "$raw_dir"/*_R1_*.fastq.gz; do
       --detect_adapter_for_pe \
       --cut_tail \
       --cut_mean_quality 20 \
-      --length_required 30 \
-      --thread 8 \
+      --length_required 50\
+      --thread 16 \
       --html "$html" \
       --json "$json"
 
-    
+
 done
+
+
