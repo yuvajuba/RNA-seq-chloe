@@ -5,4 +5,6 @@ rawdata/
 03-fastqc/*trim_fastqc*
 03-fastqc/multiqc_all/multiqc_all_data/
 03-fastqc/multiqc_all/multiqc_all_plots/
-04-mapping/
+04-mapping/genome/
+04-mapping/Out_mapping/
+04-mapping/STAR_index/
