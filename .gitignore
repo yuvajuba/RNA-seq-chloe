@@ -8,3 +8,4 @@ rawdata/
 04-mapping/genome/
 04-mapping/Out_mapping/
 04-mapping/STAR_index/
+05-counts/featurecounts_results.txt
